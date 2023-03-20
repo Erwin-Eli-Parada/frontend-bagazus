@@ -27,7 +27,8 @@ export default function verificar(usuario, password, navigate) {
                 state: {
                     usuario: res.first_name,
                     toke: res.token,
-                    auth: true
+                    auth: true,
+                    role: res.role
                 }
             })
         })
