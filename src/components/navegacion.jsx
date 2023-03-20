@@ -1,16 +1,17 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
-export function Navegacion({ children }) { //Pasar el nombre del usuario como prop o en un context
+export function Navegacion({ children }) {
     
     const navigate = useNavigate();
-    const usuario = "Usuario" //Modificar el nombre del usuario aqui
+    const { state } = useLocation()
+    const usuario = state.usuario
 
     const handleClickUsuarios = e => {
         navigate('/users', {
             replace: true,
             state: {
-                auth: true
+                auth: state.auth
             }
         });
     }
@@ -19,7 +20,7 @@ export function Navegacion({ children }) { //Pasar el nombre del usuario como pr
         navigate('/products', {
             replace: true,
             state: {
-                auth: true
+                auth: state.auth
             }
         });
     }
@@ -28,7 +29,7 @@ export function Navegacion({ children }) { //Pasar el nombre del usuario como pr
         navigate('/tags', {
             replace: true,
             state: {
-                auth: true
+                auth: state.auth
             }
         });
     }

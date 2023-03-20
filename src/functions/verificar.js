@@ -25,7 +25,7 @@ export default function verificar(usuario, password, navigate) {
             navigate('/users', {
                 replace: true,
                 state: {
-                    usuario: res.first_name,
+                    usuario: res.first_name+" "+res.last_name,
                     toke: res.token,
                     auth: true,
                     role: res.role
