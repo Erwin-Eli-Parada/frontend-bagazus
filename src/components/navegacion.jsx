@@ -49,7 +49,7 @@ export function Navegacion({ children }) { //Pasar el nombre del usuario como pr
                 <button onClick={handleClickProductos}>Productos</button>
                 <button onClick={handleClickTags}>Tags</button>
                 <button onClick={handleClickSalir}>Salir</button>
-                <p>Hola + {usuario}</p>
+                <p>Hola {usuario}</p>
             </div>
             {children}
         </div>

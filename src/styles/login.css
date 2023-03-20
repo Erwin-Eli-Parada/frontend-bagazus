@@ -1,0 +1,65 @@
+.login {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(180deg, rgb(162, 245, 161), rgba(97, 148, 38, 0.85));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #619426;
+  padding: 40px 20px;
+  height: 70%;
+  min-height: 400px;
+  width: 30%;
+  min-width: 300px;
+  box-shadow: 5px 5px 5px 3px rgba(1, 28, 71, 0.2);
+  border-radius: 10px;
+  animation-duration: 3s;
+  animation-name: bajadainicio;
+}
+.login-container h1 {
+  color: white;
+  text-align: center;
+  width: 80%;
+}
+.login-container .input {
+  width: 80%;
+  height: 45px;
+  border-radius: 10px;
+  padding-left: 5px;
+  font-size: 18px;
+  border: none;
+}
+.login-container .input:focus {
+  border: none;
+  outline: none;
+}
+.login-container .submit {
+  font-size: 18px;
+  width: 54%;
+  height: 40px;
+  border-radius: 10px;
+  background-color: rgba(97, 148, 38, 0.85);
+  border: none;
+  color: white;
+  box-shadow: 3px 3px 5px 3px rgba(1, 28, 71, 0.2);
+}
+.login-container .submit:hover {
+  background-color: rgba(132, 187, 70, 0.85);
+}
+.login-container .submit:focus {
+  background-color: rgba(130, 213, 36, 0.85);
+}
+@keyframes bajadainicio {
+  0% {
+    margin-bottom: 100%;
+  }
+  100% {
+    margin-bottom: 0%;
+  }
+}/*# sourceMappingURL=login.css.map */

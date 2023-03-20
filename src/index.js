@@ -9,6 +9,8 @@ import { Productos } from "./pages/productos";
 import { Tags } from "./pages/tags";
 import { Usuarios } from "./pages/usuarios";
 
+import "./index.css"
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
