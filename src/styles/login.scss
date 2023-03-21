@@ -51,6 +51,8 @@
             border: none;
             color: white;
             box-shadow: 3px 3px 5px 3px rgba(1,28,71,.2);
+            animation-duration: 3s;
+            animation-name: bajadainicio;
 
             &:hover{
                 background-color: rgba(132, 187, 70, 0.85);
@@ -63,11 +65,13 @@
 
     @keyframes bajadainicio{
         0% {
-            margin-bottom: 100%;
+            background-color: transparent;
+            color: transparent;
         }
     
         100%{
-            margin-bottom: 0%;
+            background-color: #619426;
+            color: white;
         }
     }
 }

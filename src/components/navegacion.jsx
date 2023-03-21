@@ -1,5 +1,6 @@
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import "../styles/navegacion.css"
 
 export function Navegacion({ children }) {
     
@@ -11,7 +12,10 @@ export function Navegacion({ children }) {
         navigate('/users', {
             replace: true,
             state: {
-                auth: state.auth
+                auth: state.auth,
+                usuario: state.usuario,
+                token: state.token,
+                role: state.role
             }
         });
     }
@@ -20,7 +24,10 @@ export function Navegacion({ children }) {
         navigate('/products', {
             replace: true,
             state: {
-                auth: state.auth
+                auth: state.auth,
+                usuario: state.usuario,
+                token: state.token,
+                role: state.role
             }
         });
     }
@@ -29,7 +36,10 @@ export function Navegacion({ children }) {
         navigate('/tags', {
             replace: true,
             state: {
-                auth: state.auth
+                auth: state.auth,
+                usuario: state.usuario,
+                token: state.token,
+                role: state.role
             }
         });
     }
@@ -38,7 +48,10 @@ export function Navegacion({ children }) {
         navigate('/login', {
             replace: true,
             state: {
-                auth: false
+                auth: state.auth,
+                usuario: state.usuario,
+                token: state.token,
+                role: state.role
             }
         });
     }
@@ -46,11 +59,13 @@ export function Navegacion({ children }) {
     return (
         <div className="page">
             <div className="navegacion-wrapper">
-                <button onClick={handleClickUsuarios}>Usuarios</button>
-                <button onClick={handleClickProductos}>Productos</button>
-                <button onClick={handleClickTags}>Tags</button>
-                <button onClick={handleClickSalir}>Salir</button>
-                <p>Hola {usuario}</p>
+                <div className="botones">
+                <button className="btn" onClick={handleClickUsuarios}>Usuarios</button>
+                <button className="btn" onClick={handleClickProductos}>Productos</button>
+                <button className="btn" onClick={handleClickTags}>Tags</button>
+                <button className="btn" onClick={handleClickSalir}>Salir</button>
+                </div>
+                <p className="usuario">Hola {usuario}</p>
             </div>
             {children}
         </div>
